@@ -1,0 +1,179 @@
+.container {
+    margin: 5px;
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: -11px 10px 53px 5px rgba(73, 73, 73, 0.36);
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+table {
+    border: 1px solid grey;
+    width: 100%;
+    border-radius: 4px;
+   padding: 7px;
+  }
+
+.header::-webkit-scrollbar {
+    height: 7px;
+}
+.header::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #949494;
+}
+
+.header .active {
+    border-bottom: 3px solid #f8b34b;
+}
+
+.section {
+    display: flex;
+    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail .row {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 786px) {
+    .container {
+        width: 600px;
+    }
+    .detail .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .container {
+        width: 380px;
+    }
+    .detail .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 300px;
+    }
+    .detail .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.detail .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail .row > div {
+    flex: 1;
+}
+
+.detail .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 1px 8px;
+    margin: 8px 4px;
+    background-color: #646463;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+}
+
+.chip p {
+    font-weight: 500;
+    line-height: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.chip_btn {
+    cursor: pointer;
+    color: #ff7d00;
+}
+.chip .chip_btn:active {
+    color: #eee;
+    transform: scale(0.9);
+}
+
+.active_chip {
+    background-color: #141414;
+}
+.active_chip p {
+    color: #eee;
+}
+
+.savebtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.save {
+    width: 120px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ff7d00;
+    background-color: #646463;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.save:active {
+    color: #eee;
+    transform: scale(0.9)
+}
