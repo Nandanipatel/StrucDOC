@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InputControl from "./InputControl";
+import styles from "./InputControl.module.css";
 
 function CrackInput() {
   const [input1, setInput1] = useState("");
@@ -90,7 +91,11 @@ function CrackInput() {
           {" "}
           <p>Average: {findAverage()}</p>
         </tr>
-        <tr> Condition: {condition}</tr>
+        <tr>{" "}
+          Condition: {condition}</tr>
+        <tr className={styles.refline}>
+          Referance: IS 456-2000, P-18, T-3
+        </tr>
       </table>
     </>
   );

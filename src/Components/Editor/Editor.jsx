@@ -3,6 +3,7 @@ import InputControl from "../InputControl/InputControl";
 import { XCircle, Save, PlusCircle } from "react-feather";
 import style from "./Editor.module.css";
 import CrackInput from "../InputControl/CrackInput";
+import ColumnInput from "../InputControl/ColumnInput";
 
 function Editor(props) {
   const sections = props.sections;
@@ -28,24 +29,12 @@ function Editor(props) {
   // const [chartData, setChartData] = useState([]);
 
   const [time, setTime] = useState(0);
-  const [cTotal, setCTotal] = useState([]);
-  const [crackLength, setCrackLength] = useState(0);
-  const [elementNo, setElementNo] = useState(0);
   const [data, setData] = useState(0);
   const [chart, setChart] = useState([{}]);
   const [test, setTest] = useState(0);
   const [ph, setPh] = useState(0);
   const [barchart, setBarChart] = useState([]);
 
-  function calculateAverage(array) {
-    var total = 0;
-    var count = 0;
-    array.forEach(function (i, index) {
-      total += i;
-      count++;
-    });
-    return total / count;
-  }
 
   // Body components of editor part
   //****** basic info */
@@ -712,46 +701,7 @@ function Editor(props) {
             <th>Description</th>
           </tr>
           {/* Columns */}
-          <tr>
-            <td>Columns</td>
-            <td>
-              <InputControl
-                type="file"
-                accept="image/*"
-                placeholder="Select Image"
-                onChange={(event) =>
-                  setImages((prev) => ({
-                    ...prev,
-                    columnImg: URL.createObjectURL(event.target.files[0]),
-                  }))
-                }
-              />
-            </td>
-            <td>
-              <InputControl
-                placeholder="Enter Remarks"
-                value={values.columnRemark}
-                onChange={(event) =>
-                  setVelues((prev) => ({
-                    ...prev,
-                    columnRemark: event.target.value,
-                  }))
-                }
-              />
-            </td>
-            <td>
-              <InputControl
-                placeholder="Enter Description"
-                value={values.columnMoisture}
-                onChange={(event) =>
-                  setVelues((prev) => ({
-                    ...prev,
-                    columnMoisture: event.target.value,
-                  }))
-                }
-              />
-            </td>
-          </tr>
+          <ColumnInput activeInfo={activeInfo} section={sections} sectionTitle={sectionTitle} information={information} activeDetailIndex={activeDetailIndex} />
           {/* Beams */}
           <tr>
             <td>Beams</td>

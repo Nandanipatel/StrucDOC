@@ -22,3 +22,9 @@ input:hover {
 input:focus {
     border: 1px solid rgb(204, 141, 141)
 }
+.refline{
+    color: #939292;
+    font-size: small;
+    font-weight: 400;
+    min-width: 300px !important;
+}

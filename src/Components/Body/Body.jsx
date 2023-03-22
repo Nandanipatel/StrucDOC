@@ -35,6 +35,7 @@ function Body() {
         },
         [sections.groundFloor]: {
             id: sections.groundFloor,
+            columnData: [],
             sectionTitle: sections.groundFloor,
             detail: {},
         },
